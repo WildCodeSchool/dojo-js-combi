@@ -11,7 +11,7 @@ describe("fibonacci suite", () => {
   });
 
   it("should not include while loop", () => {
-    assert.strictEqual(fibo.toString().includes("for"), false);
+    assert.strictEqual(fibo.toString().includes("while"), false);
   });
 
   it("should be recursive", () => {
