@@ -25,7 +25,7 @@ describe("combi suite", () => {
   });
 
   it("combi(['A', 'B', 'C', 'A']) should be equal to ['ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA']", () => {
-    assert.strictEqual(combi(['A', 'B', 'C']), ['ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA']);
+    assert.strictEqual(combi(['A', 'B', 'C', 'A']), ['ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA']);
   });
 
   it("combi([1, 2, 3]) should be equal to ['123', '132', '213', '231', '312', '321']", () => {
@@ -41,6 +41,6 @@ describe("combi suite", () => {
   });
 
   it("combi() should throw an error", () => {
-    assert.throws(combi([]), /^Error: Illegal argument$/);
+    assert.throws(combi(), /^Error: Illegal argument$/);
   });
 });

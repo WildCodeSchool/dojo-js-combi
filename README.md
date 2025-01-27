@@ -1,28 +1,16 @@
-Create a recursive function `fibo` that returns n'th element of Fibonacci sequence.
+Create a function that returns all combinations of a given list of elements (without repetition).
 
----
+Examples
+```js
+combi(['A', 'B', 'C']); // -> ['ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA']
 
-fibo(0) = 0
+combi(['A', 'B', 'C', 'A']); // -> ['ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA']
 
-fibo(1) = 1
+combi([1, 2, 3]); // -> ['123', '132', '213', '231', '312', '321']
 
-fibo(n) = fibo(n-1) + fibo(n-2)
+combi([1, 'Z', 3]); // -> ['1Z3', '13Z', 'Z13', 'Z31', '31Z', '3Z1']
 
-Example:
-fibo(4) = fibo(3) + fibo(2)
+combi([]); // -> []
 
----
-
-Replace fibo(x) call with their respective values :
-
-fibo(4) = (fibo(2) + fibo(1)) + (fibo(1) + fibo(0))
-
-fibo(4) = ((fibo(1) + fibo(0)) + 1) + (1 + 0)
-
-fibo(4) = ((1 + 0) + 1) + (1 + 0)
-
-fibo(4) = 3
-
----
-
-This function must be recursive: you can't use a loop.
+combi(); // -> Throws an Error: Illegal argument
+```
